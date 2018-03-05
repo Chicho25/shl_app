@@ -1,0 +1,10 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteOptions inherit
+RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301] 
+</IfModule>
+
+# END WordPress
